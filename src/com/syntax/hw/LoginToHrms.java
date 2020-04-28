@@ -38,7 +38,7 @@ public class LoginToHrms {
 		
 		driver.get(prop.getProperty("url"));
 		Thread.sleep(3000);
-		
 		driver.close();
+		//BREAK TILL 11:50
 	}
 }
