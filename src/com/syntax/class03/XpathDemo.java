@@ -26,6 +26,10 @@ System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 		
 		driver.findElement(By.xpath("//a[contains(@class,'panel')]")).click();
 		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//a[starts-with(text(),'Log')]")).click();
+		
 		
 	}
 
