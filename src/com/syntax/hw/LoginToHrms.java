@@ -13,6 +13,14 @@ public class LoginToHrms {
 	
 	//public static WebDriver driver;
 
+	
+	/**
+	 * Use this method in need of lunching chrome or firefox browser.
+	 * 
+	 * @param args
+	 * @throws IOException
+	 * @throws InterruptedException
+	 */
 	public static void main(String[] args) throws IOException, InterruptedException {
 		
 		String filePath=System.getProperty("user.dir")+"/configs/configuration.properties";
