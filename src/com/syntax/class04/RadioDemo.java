@@ -1,7 +1,6 @@
 package com.syntax.class04;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +18,7 @@ public class RadioDemo {
 		WebElement maleRadioB = driver.findElement(By.xpath("//input[@id='sex-0']"));
 
 		System.out.println(maleRadioB.getAttribute("class"));
-		
+
 		System.out.println(maleRadioB.isDisplayed());// true
 		System.out.println(maleRadioB.isEnabled());// true
 		System.out.println("Radio Btn is Selected:: " + maleRadioB.isSelected());// false
@@ -35,30 +34,24 @@ public class RadioDemo {
 		int listSize = proList.size();
 		System.out.println("Size of CheckBoxes are:: " + listSize);
 
-		String valueToBeSelected="Manual Tester";
-		//driver.findElement(By.xpath("//input[@id='sex-0']")).getAttribute("value");
+		String valueToBeSelected = "Manual Tester";
+		// driver.findElement(By.xpath("//input[@id='sex-0']")).getAttribute("value");
 		for (WebElement profession : proList) {
 
-			if(profession.isEnabled()) {//Checking is the check-box is enabled
-				
-				String value=profession.getAttribute("value");//get value of value attribute
-				
+			if (profession.isEnabled()) {// Checking is the check-box is enabled
+
+				String value = profession.getAttribute("value");// get value of value attribute and returns string object
+
 				System.out.println(value);
-				
-				if(value.equals(valueToBeSelected)) {
+
+				if (value.equals(valueToBeSelected)) {
 					profession.click();
 					break;
 				}
-				
+
 			}
 		}
 
 	}
 
-	
-	
-	
-	
-	
-	
 }

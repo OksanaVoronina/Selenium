@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class WebElementC {
 	
 	public static String url ="http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx";
-	
 	public static String userName="Tester";
 	public static String password="test";
 	
