@@ -8,7 +8,7 @@ public class BaseClass {
 
 	public static WebDriver driver;
 	
-	public static void setUp() {
+	public static WebDriver setUp() {
 		
 		ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);
 		
@@ -27,6 +27,7 @@ public class BaseClass {
 		}
 		
 		driver.get(ConfigsReader.getProperty("url"));
+		return driver;
 	}
 	
 	public static void tearDown() {
