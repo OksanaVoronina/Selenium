@@ -11,7 +11,7 @@ public class MultiSelectDD{
 
 	public static void main(String[] args) throws InterruptedException {
 
-		WebDriver driver=BaseClass.setUp();
+		WebDriver driver=BaseClass.setUp();//In properties file, uncomment demoqa.com URL (code written for demoqa.com).
 		
 		WebElement multiSelectDD=driver.findElement(By.id("continentsmultiple"));
 		
@@ -32,7 +32,7 @@ public class MultiSelectDD{
 		}
 		
 	
-		
+		BaseClass.tearDown();
 		
 		
 		

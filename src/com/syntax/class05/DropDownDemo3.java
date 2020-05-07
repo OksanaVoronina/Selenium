@@ -21,7 +21,7 @@ public class DropDownDemo3 extends BaseClass{
 		expectedList.add("Australia");
 		
 		
-		setUp();
+		setUp();//In properties file, uncomment demoqa.com URL (code written for demoqa.com).
 		
 		WebElement continents=driver.findElement(By.id("continents"));
 		
@@ -48,7 +48,7 @@ public class DropDownDemo3 extends BaseClass{
 		}
 		
 		
-		
+		tearDown();
 		
 		
 		

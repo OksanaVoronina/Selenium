@@ -11,8 +11,10 @@ import com.syntax.utils.BaseClass;
 public class DropDownDemo1 extends BaseClass {
 
 	public static void main(String[] args) throws InterruptedException {
-
-		setUp();//Open chrome browser and lucnch Syntax Practice Site
+		
+		//In properties file, uncomment Syntax Practice site URL (code written for Practice app).
+		setUp();
+		
 
 		WebElement weekDD = driver.findElement(By.id("select-demo"));
 

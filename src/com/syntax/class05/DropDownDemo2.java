@@ -12,7 +12,7 @@ public class DropDownDemo2 extends BaseClass {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		setUp();
+		setUp();//In properties file, uncomment demoqa.com URL (code written for demoqa.com).
 
 		WebElement continents = driver.findElement(By.id("continents"));
 
