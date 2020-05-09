@@ -6,9 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import com.syntax.utils.BaseClass;
-
-public class WaitDemo {
+public class ImplicitWait {
 
 	public static void main(String[] args) throws InterruptedException {
 		
@@ -18,10 +16,12 @@ public class WaitDemo {
 		driver.manage().window().fullscreen();
 		
 		/*
-		 * Implicit wait is kinda global wait and it will wait for each and every element.
-		 * it waits on for element to be found, meaning it will work for findElement and 
-		 * findElements methods only. as soon as its found, the remaining time will be ignored.
+		 * Implicit wait is kinda global wait and it will wait for each and every element 
+		 * in your program.
+		 * it waits on for element to be found, meaning it will work for findElement(); and 
+		 * findElements(); methods only. as soon as its found, the remaining time will be ignored.
 		 */
+		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		
