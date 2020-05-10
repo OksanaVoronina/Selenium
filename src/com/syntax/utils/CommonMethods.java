@@ -2,6 +2,8 @@ package com.syntax.utils;
 
 import java.util.List;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.UnexpectedTagNameException;
@@ -64,6 +66,7 @@ public class CommonMethods extends BaseClass {
 
 	/**
 	 * Method that selects value by index
+	 * 
 	 * @param element
 	 * @param index
 	 */
@@ -72,12 +75,48 @@ public class CommonMethods extends BaseClass {
 		try {
 			Select select = new Select(element);
 			int size = select.getOptions().size();
-			
+
 			if (size > index) {
 				select.selectByIndex(index);
 			}
 		} catch (UnexpectedTagNameException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public static void acceptAlert() {
+
+		try {
+			Alert alert = driver.switchTo().alert();
+			alert.accept();
+
+		} catch (NoAlertPresentException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void dismissAlert() {
+
+		try {
+			Alert alert = driver.switchTo().alert();
+			alert.dismiss();
+
+		} catch (NoAlertPresentException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static String getAlertText() {
+
+		String alertText = null;
+
+		try {
+			Alert alert = driver.switchTo().alert();
+			alertText = alert.getText();
+		} catch (NoAlertPresentException e) {
+			e.printStackTrace();
+		}
+
+		return alertText;
 	}
 }

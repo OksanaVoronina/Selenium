@@ -13,14 +13,16 @@ public class FacebookSignUp extends CommonMethods{
  */
 	public static void main(String[] args) throws InterruptedException {
 		
+		//open browser and navigate to url
 		setUp();
 		
-		
-		//WebElement sigUp=driver.findElement(By.name("websubmit"));
-		
+		//select month
 		WebElement monthDD=driver.findElement(By.id("month"));
-		Select obj=new Select(monthDD);
-		obj.selectByIndex(13);
+		selectDdValue(monthDD, 8);
+		
+		//select day
+		WebElement dayDD=driver.findElement(By.id("day"));
+		selectDdValue(dayDD, "5");
 		
 		Thread.sleep(3000);
 
