@@ -4,9 +4,12 @@ import java.util.List;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.UnexpectedTagNameException;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CommonMethods extends BaseClass {
 
@@ -84,6 +87,9 @@ public class CommonMethods extends BaseClass {
 		}
 	}
 
+	/**
+	 * Methods that accept alerts and catches exception if alert is not present
+	 */
 	public static void acceptAlert() {
 
 		try {
@@ -95,6 +101,9 @@ public class CommonMethods extends BaseClass {
 		}
 	}
 
+	/**
+	 * Methods that dismiss alerts and catches exception if alert is not present
+	 */
 	public static void dismissAlert() {
 
 		try {
@@ -106,6 +115,11 @@ public class CommonMethods extends BaseClass {
 		}
 	}
 
+	/**
+	 * Methods that gets text of alert and catches exception if alert is not present
+	 * 
+	 * @return String alert text
+	 */
 	public static String getAlertText() {
 
 		String alertText = null;
@@ -118,5 +132,60 @@ public class CommonMethods extends BaseClass {
 		}
 
 		return alertText;
+	}
+
+	/**
+	 * Methods that sends text to alert and catches exception if alert is not
+	 * present
+	 * 
+	 */
+	public static void sendAlertText(String text) {
+		try {
+			Alert alert = driver.switchTo().alert();
+			alert.sendKeys(text);
+		} catch (NoAlertPresentException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void switchToFrame(String nameOrId) {
+
+		try {
+			driver.switchTo().frame(nameOrId);
+		} catch (NoSuchFrameException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void switchToFrame(WebElement element) {
+
+		try {
+			driver.switchTo().frame(element);
+		} catch (NoSuchFrameException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void switchToFrame(int index) {
+		
+		try {
+			driver.switchTo().frame(index);
+		} catch (NoSuchFrameException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static WebDriverWait getWaitObject() {
+		WebDriverWait wait=new WebDriverWait(driver, Constants.EXPLICIT_WAIT_TIME);
+		return wait;
+	}
+	
+	public static void waitForClickability(WebElement element) {
+		getWaitObject().until(ExpectedConditions.elementToBeClickable(element));
+	}
+	
+	public static void click(WebElement element) {
+		waitForClickability(element);
+		element.click();
 	}
 }
