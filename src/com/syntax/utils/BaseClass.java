@@ -17,6 +17,7 @@ public class BaseClass {
 		switch (ConfigsReader.getProperty("browser").toLowerCase()) {
 
 		case "chrome":
+			
 			System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
 			driver = new ChromeDriver();
 			break;
