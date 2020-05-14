@@ -24,6 +24,7 @@ public class SimpleCalendarDemo extends BaseClass{
 	 */
 	public static void main(String[] args) throws InterruptedException {
 
+		//http://166.62.36.207/humanresources/symfony/web/index.php/auth/loginhttps://www.delta.com/
 		setUp();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
@@ -33,6 +34,7 @@ public class SimpleCalendarDemo extends BaseClass{
 		driver.findElement(By.id("btnLogin")).click();
 		
 		//Navigate to leave list
+		CommonMethods.waitForClickability(driver.findElement(By.linkText("Leave")));
 		driver.findElement(By.linkText("Leave")).click();
 		driver.findElement(By.linkText("Leave List")).click();
 		
