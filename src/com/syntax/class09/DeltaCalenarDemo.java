@@ -1,17 +1,15 @@
 package com.syntax.class09;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import com.syntax.utils.BaseClass;
 
 public class DeltaCalenarDemo extends BaseClass {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		setUp();
+		setUp();//https://www.delta.com
 
 		// click on the depart/to calendar
 		driver.findElement(By.xpath("//span[@id='calDepartLabelCont']")).click();
