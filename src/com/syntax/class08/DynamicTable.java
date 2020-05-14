@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import com.syntax.utils.BaseClass;
 
 public class DynamicTable extends BaseClass {
@@ -12,7 +11,6 @@ public class DynamicTable extends BaseClass {
 	public static void main(String[] args) throws InterruptedException {
 
 		setUp();// https://the-internet.herokuapp.com/
-
 		
 		driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester");
 		driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("test");
@@ -32,12 +30,8 @@ public class DynamicTable extends BaseClass {
 				driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//td[1]")).get(i).click();
 				break;
 			}
-			
-		
 		}
 		Thread.sleep(6000);
 		driver.close();
-
 	}
-
 }
