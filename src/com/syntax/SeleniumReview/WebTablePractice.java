@@ -14,16 +14,18 @@ public class WebTablePractice {
 
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://testingpool.com/data-types-in-java/");
-
+		//getting row number
 		List<WebElement> rows = driver.findElements(By.xpath("//div[contains(@class, 'su-table')]/table/tbody/tr"));
 		int rowNums = rows.size();
 		System.out.println("Total row number is " + rowNums);
-
+		
+		//getting column number
 		List<WebElement> cols = driver
 				.findElements(By.xpath("//div[contains(@class, 'su-table')]/table/tbody/tr[1]/td"));
 		int colNums = cols.size();
 		System.out.println("Total number of cols is " + colNums);
-
+		
+		//extracting cell data
 		for (int i = 1; i <= rows.size(); i++) {
 			for (int j = 1; j <= cols.size(); j++) {
 				WebElement cellData = driver.findElement(
@@ -33,6 +35,7 @@ public class WebTablePractice {
 				if(j == 2) {
 					System.out.println(cellDataText);
 				}
+				
 			}
 		}
 	}
