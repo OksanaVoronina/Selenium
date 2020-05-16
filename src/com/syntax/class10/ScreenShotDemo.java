@@ -13,9 +13,9 @@ import com.syntax.utils.ConfigsReader;
 
 public class ScreenShotDemo extends BaseClass {
 
-	public static void main(String[] args) throws InterruptedException, IOException {
+	public static void main(String[] args) throws InterruptedException {
 
-		setUp();
+		setUp();//http://166.62.36.207/humanresources/symfony/web/index.php/auth/login
 		//Login to HRMS Application
 		driver.findElement(By.name("txtUsername")).sendKeys(ConfigsReader.getProperty("username"));
 		driver.findElement(By.id("txtPassword")).sendKeys(ConfigsReader.getProperty("password"));
@@ -28,8 +28,12 @@ public class ScreenShotDemo extends BaseClass {
 		File souceFile=ts.getScreenshotAs(OutputType.FILE);
 		
 		//Copy the file from source to a another destination 
-		FileUtils.copyFile(souceFile, new File("screenshots/HRMS/pics.png"));
-		//12:06
+		try {
+			FileUtils.copyFile(souceFile, new File("screenshots/HRMS/pics.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.out.println("Screenshot was not taken");
+		}
 		tearDown();
 		
 		
