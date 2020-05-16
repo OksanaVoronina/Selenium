@@ -11,9 +11,13 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 
 public class AmericanAirlineCalendar {
 	/*
-	 * TC 1: Calendar headers and rows verification Open chrome browser Go to
-	 * “https://www.aa.com/homePage.do” Enter From and To Select departure as July
-	 * 14 of 2020 Select arrival as November 8 of 2020 Close browser
+	 * TC 1: Calendar headers and rows verification 
+	 * Open Chrome browser Go to
+	 * “https://www.aa.com/homePage.do” 
+	 * Enter From and To Select departure as July
+	 * 14 of 2020 
+	 * Select arrival as November 8 of 2020 
+	 * Close browser
 	 */
 
 	public static void main(String[] args) throws InterruptedException {
@@ -36,6 +40,7 @@ public class AmericanAirlineCalendar {
 
 		boolean flag = false;
 
+		// select depart date
 		while (!flag) {
 
 			String dMonth = driver.findElement(By.xpath("//div[contains(@class,'ui-corner-left')]/div")).getText();
@@ -45,7 +50,6 @@ public class AmericanAirlineCalendar {
 
 				for (WebElement cell : depCells) {
 					String cellText = cell.getText();
-
 					if (cellText.equals("14")) {
 						cell.click();
 						flag = true;
@@ -54,18 +58,17 @@ public class AmericanAirlineCalendar {
 				}
 
 			} else {
+				// if element text not equal, click next button
 				driver.findElement(By.xpath("//a[@title='Next']")).click();
 			}
-			
 			Thread.sleep(1000);
 		}
-		
-		
 
 		driver.findElement(By.xpath("//input[@id='aa-returningFrom']")).click();
-		
-		flag=false;
-		
+
+		flag = false;
+
+		// select return date
 		while (!flag) {
 
 			String rMonth = driver.findElement(By.xpath("//div[contains(@class,'ui-corner-left')]/div")).getText();
@@ -73,26 +76,23 @@ public class AmericanAirlineCalendar {
 
 				List<WebElement> returnCells = driver.findElements(
 						By.xpath("//div[contains(@class,'ui-corner-left')]/following-sibling::table/tbody/tr/td"));
-
 				for (WebElement returnCell : returnCells) {
-					String returnText=returnCell.getText();
-					if(returnText.equals("8")) {
+					String returnText = returnCell.getText();
+					if (returnText.equals("8")) {
 						returnCell.click();
-						flag=true;
+						flag = true;
 						break;
 					}
 				}
 
-			}else{
+			} else {
+				// if element text not equal, click next button
 				driver.findElement(By.xpath("//a[@title='Next']")).click();
 			}
 			Thread.sleep(1000);
-
 		}
 
 		Thread.sleep(5000);
 		driver.quit();
-
 	}
-
 }

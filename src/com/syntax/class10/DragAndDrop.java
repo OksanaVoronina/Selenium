@@ -16,15 +16,23 @@ public class DragAndDrop {
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver.get(url);
+		
+		//elements are inside frame, so switch to frame
 		driver.switchTo().frame(0);
+		
+		//locate both elements to drag and drop.
 		WebElement drag=driver.findElement(By.id("draggable"));
 		WebElement drop=driver.findElement(By.id("droppable"));
 		
+		//Create of object of action class and pass the webdriver in the constructor
 		Actions action=new Actions(driver);
 		//drag a file and drop it in the source. Longer way
 		//action.clickAndHold(drag).moveToElement(drop).release().perform();
 
+		//use dragAndDrop() method to drag and drop elemet.
 		action.dragAndDrop(drag, drop).perform();
+		
+		
 		Thread.sleep(5000);
 		driver.quit();
 

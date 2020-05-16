@@ -1,7 +1,6 @@
 package com.syntax.class10;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -12,7 +11,7 @@ public class ActionClassAmazonDemo {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		WebDriver driver=BaseClass.setUp();
+		WebDriver driver=BaseClass.setUp();//Amazon.com
 		
 		WebElement account=driver.findElement(By.xpath("//a[@id='nav-link-accountList']"));
 	
@@ -22,6 +21,7 @@ public class ActionClassAmazonDemo {
 		//Hover the mouse over Menu
 		WebElement element=driver.findElement(By.xpath("//div[@id='nav-flyout-ya-newCust']"));
 		
+		//validate the menu is poped up.
 		if(element.getText().contains("Start")) {
 			System.out.println("Menu displayed");
 		}else {

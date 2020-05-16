@@ -9,9 +9,11 @@ public class FileUploadDemo {
 
 	public static void main(String[] args) throws InterruptedException {
 
+		//Path of the file to upload
 		String filePath="/Users/syntax/Desktop/myFile.png";
+		
+		//open browser and navigate to the-internet.herokuapp.com
 		String url = "https://the-internet.herokuapp.com/";
-
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 		WebDriver driver = new ChromeDriver();
@@ -21,15 +23,16 @@ public class FileUploadDemo {
 		driver.findElement(By.linkText("File Upload")).click();
 		
 		
-		//driver.findElement(By.id("file-upload")).click();//instead of click use sendKeys();
-		//We simply use sendkeys() method to upload the file
+		//We simply use sendkeys() method to upload the file.
+		//locate the choose element and send() path of file to it.
 		driver.findElement(By.id("file-upload")).sendKeys(filePath);
 		
+		//click on upload button
 		driver.findElement(By.id("file-submit")).click();
 		Thread.sleep(3000);
 		
 		driver.quit();
-		//Break till 1:40
+		
 		
 	}
 
