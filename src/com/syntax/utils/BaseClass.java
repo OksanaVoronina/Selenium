@@ -15,10 +15,10 @@ public class BaseClass {
 
 		ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
+		
 		switch (ConfigsReader.getProperty("browser").toLowerCase()) {
 
 		case "chrome":
-			
 			System.setProperty("webdriver.chrome.driver", Constants.CHROME_DRIVER_PATH);
 			driver = new ChromeDriver();
 			break;
