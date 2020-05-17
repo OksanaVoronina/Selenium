@@ -55,7 +55,7 @@ public class CommonMethods extends BaseClass {
 
 		try {
 			Select select = new Select(element);
-			
+
 			List<WebElement> options = select.getOptions();
 
 			for (WebElement el : options) {
@@ -209,33 +209,44 @@ public class CommonMethods extends BaseClass {
 		waitForClickability(element);
 		element.click();
 	}
-	
+
 	public static JavascriptExecutor getJSObject() {
-		JavascriptExecutor js=(JavascriptExecutor)driver;
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		return js;
 	}
-	
+
 	public static void jsClick(WebElement element) {
 		getJSObject().executeScript("arguments[0].click();", element);
 	}
-	
+
 	public static void scrollToElement(WebElement element) {
 		getJSObject().executeScript("arguments[0].scrollIntoView(true);", element);
 	}
-	
+
 	/**
 	 * Method that will scroll the page down based on the passed pixel parameters
+	 * 
 	 * @param pixel
 	 */
 	public static void scrollDown(int pixel) {
-		getJSObject().executeScript("window.scrollBy(0,"+pixel+")");
+		getJSObject().executeScript("window.scrollBy(0," + pixel + ")");
 	}
-	
+
 	/**
 	 * Method that will scroll the page up based on the passed pixel parameters
+	 * 
 	 * @param pixel
 	 */
 	public static void scrollUp(int pixel) {
-		getJSObject().executeScript("window.scrollBy(0,-"+pixel+")");
+		getJSObject().executeScript("window.scrollBy(0,-" + pixel + ")");
+	}
+
+	
+	public static void wait(int second) {
+		try {
+			Thread.sleep(second * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 }
