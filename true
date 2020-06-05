@@ -1,6 +1,6 @@
-[1589739220.630][INFO]: Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 7397
-[1589739220.630][INFO]: Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1589739220.810][INFO]: [c86cd5200ee698d188c54e9b42975713] COMMAND InitSession {
+[1591302390.682][INFO]: Starting ChromeDriver 81.0.4044.138 (8c6c7ba89cc9453625af54f11fd83179e23450fa-refs/branch-heads/4044@{#999}) on port 42400
+[1591302390.682][INFO]: Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1591302391.293][INFO]: [2f627e5386544c64cdfc1fe5235c6308] COMMAND InitSession {
    "capabilities": {
       "firstMatch": [ {
          "browserName": "chrome",
@@ -18,7 +18,7 @@
       }
    }
 }
-[1589739220.811][INFO]: Populating Preferences file: {
+[1591302391.296][INFO]: Populating Preferences file: {
    "alternate_error_pages": {
       "enabled": false
    },
@@ -71,7 +71,7 @@
       "enabled": false
    }
 }
-[1589739220.811][INFO]: Populating Local State file: {
+[1591302391.298][INFO]: Populating Local State file: {
    "background_mode": {
       "enabled": false
    },
@@ -81,23 +81,23 @@
       }
    }
 }
-[1589739220.812][INFO]: Launching chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --load-extension=/var/folders/0d/263tkdf562gg6s69zmywrwhh0000gn/T/.com.google.Chrome.J2siln/internal --log-level=0 --no-first-run --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir=/var/folders/0d/263tkdf562gg6s69zmywrwhh0000gn/T/.com.google.Chrome.gGVjkC data:,
-[1589739221.494][INFO]: resolved localhost to ["127.0.0.1","::1"]
-[1589739221.522][INFO]: [c86cd5200ee698d188c54e9b42975713] RESPONSE InitSession {
+[1591302391.311][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --load-extension="C:\Users\Matse\AppData\Local\Temp\scoped_dir4544_220544179\internal" --log-level=0 --no-first-run --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\Matse\AppData\Local\Temp\scoped_dir4544_763380491" data:,
+[1591302391.900][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1591302393.915][INFO]: [2f627e5386544c64cdfc1fe5235c6308] RESPONSE InitSession {
    "capabilities": {
       "acceptInsecureCerts": false,
       "browserName": "chrome",
       "browserVersion": "81.0.4044.138",
       "chrome": {
-         "chromedriverVersion": "81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776})",
-         "userDataDir": "/var/folders/0d/263tkdf562gg6s69zmywrwhh0000gn/T/.com.google.Chrome.gGVjkC"
+         "chromedriverVersion": "81.0.4044.138 (8c6c7ba89cc9453625af54f11fd83179e23450fa-refs/branch-heads/4044@{#999})",
+         "userDataDir": "C:\\Users\\Matse\\AppData\\Local\\Temp\\scoped_dir4544_763380491"
       },
       "goog:chromeOptions": {
-         "debuggerAddress": "localhost:49628"
+         "debuggerAddress": "localhost:56419"
       },
       "networkConnectionEnabled": false,
       "pageLoadStrategy": "normal",
-      "platformName": "mac os x",
+      "platformName": "windows",
       "proxy": {
 
       },
@@ -111,34 +111,81 @@
       "unhandledPromptBehavior": "dismiss and notify",
       "webauthn:virtualAuthenticators": true
    },
-   "sessionId": "c86cd5200ee698d188c54e9b42975713"
+   "sessionId": "2f627e5386544c64cdfc1fe5235c6308"
 }
-[1589739221.564][INFO]: [c86cd5200ee698d188c54e9b42975713] COMMAND SetTimeouts {
-   "implicit": 15000
+[1591302393.964][INFO]: [2f627e5386544c64cdfc1fe5235c6308] COMMAND Navigate {
+   "url": "https://the-internet.herokuapp.com/"
 }
-[1589739221.564][INFO]: [c86cd5200ee698d188c54e9b42975713] RESPONSE SetTimeouts
-[1589739221.568][INFO]: [c86cd5200ee698d188c54e9b42975713] COMMAND Navigate {
-   "url": "http://166.62.36.207/humanresources/symfony/web/index.php/auth/login"
+[1591302393.965][INFO]: Waiting for pending navigations...
+[1591302393.969][INFO]: Done waiting for pending navigations. Status: ok
+[1591302394.732][INFO]: Waiting for pending navigations...
+[1591302394.839][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302394.941][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302395.042][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302395.144][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302395.247][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302395.348][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302395.450][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302395.553][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302395.655][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302395.756][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302395.858][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302395.960][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302396.062][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302396.164][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302396.266][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302396.367][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302396.468][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302396.570][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302396.672][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302396.774][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302396.876][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302396.977][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302397.079][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302397.181][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302397.283][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302397.385][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302397.597][INFO]: Done waiting for pending navigations. Status: ok
+[1591302397.597][INFO]: [2f627e5386544c64cdfc1fe5235c6308] RESPONSE Navigate
+[1591302397.604][INFO]: [2f627e5386544c64cdfc1fe5235c6308] COMMAND FindElement {
+   "using": "link text",
+   "value": "File Upload"
 }
-[1589739221.568][INFO]: Waiting for pending navigations...
-[1589739221.569][INFO]: Done waiting for pending navigations. Status: ok
-[1589739221.908][INFO]: Waiting for pending navigations...
-[1589739222.012][SEVERE]: Timed out receiving message from renderer: 0.100
-[1589739222.113][SEVERE]: Timed out receiving message from renderer: 0.100
-[1589739222.214][SEVERE]: Timed out receiving message from renderer: 0.100
-[1589739222.315][SEVERE]: Timed out receiving message from renderer: 0.100
-[1589739222.417][SEVERE]: Timed out receiving message from renderer: 0.100
-[1589739222.517][SEVERE]: Timed out receiving message from renderer: 0.100
-[1589739222.679][SEVERE]: Timed out receiving message from renderer: 0.100
-[1589739222.789][INFO]: Done waiting for pending navigations. Status: ok
-[1589739222.789][INFO]: [c86cd5200ee698d188c54e9b42975713] RESPONSE Navigate
-[1589739222.795][INFO]: [c86cd5200ee698d188c54e9b42975713] COMMAND FindElement {
+[1591302397.604][INFO]: Waiting for pending navigations...
+[1591302397.605][INFO]: Done waiting for pending navigations. Status: ok
+[1591302397.618][INFO]: Waiting for pending navigations...
+[1591302397.619][INFO]: Done waiting for pending navigations. Status: ok
+[1591302397.619][INFO]: [2f627e5386544c64cdfc1fe5235c6308] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "7980e661-0713-49b8-9730-df58185df156"
+}
+[1591302397.625][INFO]: [2f627e5386544c64cdfc1fe5235c6308] COMMAND ClickElement {
+   "id": "7980e661-0713-49b8-9730-df58185df156"
+}
+[1591302397.625][INFO]: Waiting for pending navigations...
+[1591302397.626][INFO]: Done waiting for pending navigations. Status: ok
+[1591302397.672][INFO]: Waiting for pending navigations...
+[1591302397.955][SEVERE]: Timed out receiving message from renderer: 0.100
+[1591302398.017][INFO]: Done waiting for pending navigations. Status: ok
+[1591302398.017][INFO]: [2f627e5386544c64cdfc1fe5235c6308] RESPONSE ClickElement
+[1591302398.021][INFO]: [2f627e5386544c64cdfc1fe5235c6308] COMMAND FindElement {
    "using": "css selector",
-   "value": "#txtUsernam"
+   "value": "#file\\-upload"
 }
-[1589739222.795][INFO]: Waiting for pending navigations...
-[1589739222.795][INFO]: Done waiting for pending navigations. Status: ok
-[1589739237.831][INFO]: Waiting for pending navigations...
-[1589739237.831][INFO]: Done waiting for pending navigations. Status: ok
-[1589739237.831][INFO]: [c86cd5200ee698d188c54e9b42975713] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"#txtUsernam"}
+[1591302398.021][INFO]: Waiting for pending navigations...
+[1591302398.022][INFO]: Done waiting for pending navigations. Status: ok
+[1591302398.030][INFO]: Waiting for pending navigations...
+[1591302398.032][INFO]: Done waiting for pending navigations. Status: ok
+[1591302398.032][INFO]: [2f627e5386544c64cdfc1fe5235c6308] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "995e646e-de3d-4482-a0ec-ebccf6e8bccb"
+}
+[1591302398.038][INFO]: [2f627e5386544c64cdfc1fe5235c6308] COMMAND TypeElement {
+   "id": "995e646e-de3d-4482-a0ec-ebccf6e8bccb",
+   "text": "/Users/syntax/Desktop/myFile.png",
+   "value": [ "/", "U", "s", "e", "r", "s", "/", "s", "y", "n", "t", "a", "x", "/", "D", "e", "s", "k", "t", "..." ]
+}
+[1591302398.038][INFO]: Waiting for pending navigations...
+[1591302398.039][INFO]: Done waiting for pending navigations. Status: ok
+[1591302398.051][INFO]: Waiting for pending navigations...
+[1591302398.053][INFO]: Done waiting for pending navigations. Status: ok
+[1591302398.053][INFO]: [2f627e5386544c64cdfc1fe5235c6308] RESPONSE TypeElement ERROR invalid argument: File not found : /Users/syntax/Desktop/myFile.png
   (Session info: chrome=81.0.4044.138)

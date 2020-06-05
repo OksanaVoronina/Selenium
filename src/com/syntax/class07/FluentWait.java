@@ -1,8 +1,20 @@
 package com.syntax.class07;
 
+import java.time.Duration;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
-public class FluentWait {
+import com.google.common.base.Function;
+import com.syntax.utils.CommonMethods;
+
+public class FluentWait extends CommonMethods {
+
+	public FluentWait(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+	}
 
 	public static void main(String[] args) {
 
@@ -16,6 +28,20 @@ public class FluentWait {
 		 * wait.pollingEvery(Duration.ofSeconds(1));
 		 * wait.ignoring(NoSuchElementException.class);
 		 */
-	}
-
+		
+		FluentWait wait = new FluentWait(driver);
+		wait.withTimeout(Duration.ofSeconds(30));
+		
+		wait.pollingEvery(Duration.ofSeconds(1));
+		
+		wait.ignoring(NoSuchElementException.class);
+		
+		
+		}
+	
 }
+
+	
+
+	
+		

@@ -14,7 +14,7 @@ public class LunchChromeBrowser {
 		//for Mac users drivers/chromedriver
 		
 		//Making connection to the driver
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
 		
 		//opening the browser by calling the constructor of ChromeDriver class and upcasting.
 		WebDriver driver=new ChromeDriver();

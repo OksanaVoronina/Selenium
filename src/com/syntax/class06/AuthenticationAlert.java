@@ -14,7 +14,7 @@ public class AuthenticationAlert {
 		 */
 		
 		// Making connection to the driver
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://test:test@abcdatabase.com/basicauth");
 

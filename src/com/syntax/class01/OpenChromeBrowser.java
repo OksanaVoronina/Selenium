@@ -8,7 +8,7 @@ public class OpenChromeBrowser {
 	public static void main(String[] args) {
 
 		
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		WebDriver driver= new ChromeDriver();//go ahead and open chrome browser
 		
 		driver.get("https://www.facebook.com");

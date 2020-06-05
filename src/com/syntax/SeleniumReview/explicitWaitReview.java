@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class explicitWaitReview {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.seleniumeasy.com/test/jquery-download-progress-bar-demo.html");

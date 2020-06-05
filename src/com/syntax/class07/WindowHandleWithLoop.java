@@ -10,7 +10,7 @@ public class WindowHandleWithLoop {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://demoqa.com/automation-practice-switch-windows-2/");
 		
@@ -21,7 +21,7 @@ public class WindowHandleWithLoop {
 		
 		for(int i=1;i<=3;i++) {
 			driver.findElement(By.xpath("//button[@onclick='newBrwTab()']")).click();
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 		}
 		
 		Set<String> allWindowHandles = driver.getWindowHandles();

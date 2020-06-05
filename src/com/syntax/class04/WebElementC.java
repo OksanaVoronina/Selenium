@@ -13,7 +13,7 @@ public class WebElementC {
 	
 	public static void main(String[] args) throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get(url);
 		
@@ -50,27 +50,6 @@ public class WebElementC {
 			System.out.println("User is NOT logged in, Test Case Faild");
 
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		driver.quit();
 		

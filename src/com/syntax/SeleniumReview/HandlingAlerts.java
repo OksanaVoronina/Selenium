@@ -12,7 +12,7 @@ public class HandlingAlerts {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.seleniumframework.com/Practiceform/");

@@ -1,17 +1,22 @@
 package com.syntax.utils;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.NoSuchFrameException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.UnexpectedTagNameException;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.google.common.base.Function;
 
 public class CommonMethods extends BaseClass {
 
@@ -27,7 +32,7 @@ public class CommonMethods extends BaseClass {
 	}
 
 	/**
-	 * Method checks if radio/checkbox is enabled and clicks it
+	 * Method checks if radio/check-box is enabled and clicks it
 	 * 
 	 * @param radioOrcheckbox
 	 * @param value
@@ -222,7 +227,15 @@ public class CommonMethods extends BaseClass {
 	public static void scrollToElement(WebElement element) {
 		getJSObject().executeScript("arguments[0].scrollIntoView(true);", element);
 	}
-
+	public void ignoring(Class<NoSuchElementException> class1) {
+		// TODO Auto-generated method stub
+		
+	
+	}
+	private WebElement until(Function<WebDriver, WebElement> function) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	/**
 	 * Method that will scroll the page down based on the passed pixel parameters
 	 * 
@@ -240,8 +253,16 @@ public class CommonMethods extends BaseClass {
 	public static void scrollUp(int pixel) {
 		getJSObject().executeScript("window.scrollBy(0,-" + pixel + ")");
 	}
-
-	
+	public void withTimeout(Duration ofSeconds) {
+		// TODO Auto-generated method stub
+	}
+	public void FluentWait(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+	}
+	protected void pollingEvery(Duration ofSeconds) {
+		// TODO Auto-generated method stub
+		
+	}
 	public static void wait(int second) {
 		try {
 			Thread.sleep(second * 1000);

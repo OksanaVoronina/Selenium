@@ -13,7 +13,7 @@ public class WindowHandle {
 	public static void main(String[] args) throws InterruptedException {
 
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://166.62.36.207/syntaxpractice/window-popup-modal-demo.html");
 		

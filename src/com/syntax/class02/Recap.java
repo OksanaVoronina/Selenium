@@ -16,7 +16,7 @@ public class Recap {
 
 		String fbUrl="https://www.facebook.com";
 		
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");//window users add .exe
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");//window users add .exe
 
 		WebDriver driver=new ChromeDriver();
 		

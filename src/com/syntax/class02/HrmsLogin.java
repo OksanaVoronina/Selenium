@@ -11,7 +11,7 @@ public class HrmsLogin {
 		String url="http://166.62.36.207/humanresources/symfony/web/index.php/dashboard";
 		
 		
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
 

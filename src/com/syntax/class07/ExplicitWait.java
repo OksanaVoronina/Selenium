@@ -12,7 +12,7 @@ public class ExplicitWait {
 
 	public static void main(String[] args) {
 		
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("http://166.62.36.207/syntaxpractice/dynamic-elements-loading.html");
@@ -24,7 +24,7 @@ public class ExplicitWait {
 		 * The explicit wait is used to tell the Web Driver to wait for certain conditions 
 		 * (Expected Conditions) or the maximum time exceeded before throwing an 
 		 * "ElementNotVisibleException". Explicit wait works with ExpectedConditionsClass 
-		 * and wait untill condition becomes true or max amount of time is reached.
+		 * and wait until condition becomes true or max amount of time is reached.
 		 */
 
 		WebDriverWait wait=new WebDriverWait(driver, 20);

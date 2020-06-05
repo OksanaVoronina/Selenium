@@ -15,7 +15,7 @@ public class FileUploadDemo {
 		//open browser and navigate to the-internet.herokuapp.com
 		String url = "https://the-internet.herokuapp.com/";
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get(url);
 		
