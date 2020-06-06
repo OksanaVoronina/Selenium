@@ -253,6 +253,7 @@ public class CommonMethods extends BaseClass {
 	public static void scrollUp(int pixel) {
 		getJSObject().executeScript("window.scrollBy(0,-" + pixel + ")");
 	}
+<<<<<<< HEAD
 	public void withTimeout(Duration ofSeconds) {
 		// TODO Auto-generated method stub
 	}
@@ -263,11 +264,31 @@ public class CommonMethods extends BaseClass {
 		// TODO Auto-generated method stub
 		
 	}
+=======
+
+>>>>>>> b61cfb374e1ea6835385ab35d198a4e6466c86db
 	public static void wait(int second) {
 		try {
 			Thread.sleep(second * 1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
+		}
+	}
+	/**
+	 * this method will select a date from the calendar
+	 * 
+	 * @param element
+	 * @param text
+	 */
+	
+	public static void selectCalendarDate(List<WebElement> element, String text) {
+		for (WebElement pickDate : element) {
+			if (pickDate.isEnabled()) {
+				if (pickDate.getText().equals(text)) {
+					pickDate.click();
+					break;
+				}
+			}
 		}
 	}
 }
